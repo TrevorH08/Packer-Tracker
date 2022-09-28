@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  @using PackerTracker.Models;
+
+  <h1>Zombie Apcalpyse Packing List</h1>
+  @if(Model.Count == 0)
+  {
+    <p>There are no items in the list.</p>
+  }
+  <ul>
+    @foreach (Item item in Model)
+    {
+      <li><a href="/items/zombie/@item.Id">@item.Name</a></li>
+    }
+  </ul>
+    <a href="/items/zombie/new"><button type="button">Add a new item.</button></a>
+    <p>Pack Total Weight @Item.TotalWeight() lbs</p>
+  
+</body>
+</html>

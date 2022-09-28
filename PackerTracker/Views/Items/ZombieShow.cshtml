@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Zoombie Apocalypse Item Details: </h1>
+
+  <h2>@Model.Id: @Model.Name</h2>
+  <ul>
+    <li>$@Model.Cost</li>
+    <li>@Model.Weight lbs</li>
+    <li>Necessity: @Model.Necessity</li>
+    <li>Purchased: @Model.Purchased</li>
+    <li>Should Take: @Model.Take</li>
+  </ul>
+  <a href='/items/zombie/new'>Add another item</a>
+  <a href='/items/zombie'>View all items</a>
+</body>
+</html>
